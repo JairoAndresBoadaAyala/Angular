@@ -1,0 +1,9 @@
+<h3 appHighligth> {{familiaCompleta.title | uppercase}}</h3>
+<img [src]="familiaCompleta.image" alt="">
+<p>{{familiaCompleta.fechaNacimiento | edades }} años</p>
+<button (click) = "agregarFamiliar()">Agregar familiar</button>
+<a [routerLink]="['/familias', familiaCompleta.id]">Ver detalle</a>
+
+    
+  
+  

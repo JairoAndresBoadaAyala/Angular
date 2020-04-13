@@ -1,0 +1,8 @@
+<div class="familia-grid">
+    <app-familia
+     *ngFor="let familia of familiaCompleta"
+     (familiarClickeado)="clickFamilia($event)"
+     [familiaCompleta] = "familia">
+    </app-familia>
+  </div>
+  

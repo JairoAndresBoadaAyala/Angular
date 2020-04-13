@@ -1,0 +1,10 @@
+<div>
+    <img [src]="familiarDetalle.image" alt="">
+</div>
+<div>
+    <ul>
+        <li>Nombre: {{familiarDetalle.title}}</li>
+        <li>Fecha Nacimiento:{{familiarDetalle.fechaNacimiento | date : 'yyyy-MM-dd' }}</li>
+    </ul>
+    <p>Descripcion : {{familiarDetalle.description}}</p>
+</div>

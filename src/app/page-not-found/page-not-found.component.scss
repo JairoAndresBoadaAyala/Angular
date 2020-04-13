@@ -1,0 +1,62 @@
+.Errorpage-image img {
+    width: 29%;
+    margin: 0;
+    display:block;
+    margin:auto;
+}
+
+.Errorpage-text {
+    color: white;
+    text-align: center;
+}
+
+.Errorpage {
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 150px 10px 0 10px;
+}
+
+body {
+    background: #537533;
+    font-family: 'Lato';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+} 
+
+.Errorpage-text h3 {
+    font-size: 43px;
+    margin: 0;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.Errorpage-text p {
+    font-size: 18px;
+}
+
+div {
+    display: block;
+}
+
+.scroll
+{
+     overflow-x:scroll;
+     overflow-y:hidden;
+}

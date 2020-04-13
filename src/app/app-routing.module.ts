@@ -1,11 +1,56 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { FamiliasComponent } from './familias/familias.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { DemoComponent } from './demo/demo.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FamiliasDetalleComponent } from './familias-detalle/familias-detalle.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        loadChildren: () => import('./home/home.module').then(r => r.HomeModule)
+      },
+      {
+        path: 'familias',
+        component: FamiliasComponent
+      },
+      {
+        path: 'familias/:id',
+        component: FamiliasDetalleComponent
+      },
+      {
+        path: 'contacto',
+        component: ContactoComponent
+      }
+    ]
+  },
+    {
+    path: 'demo',
+    component: DemoComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
