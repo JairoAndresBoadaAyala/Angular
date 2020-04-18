@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute , Params} from '@angular/router';
-import { FamiliasService} from '../core/services/familias/familias.service';
-import { Familia } from '../familia.model';
+import { FamiliasService} from '../../../core/services/familias/familias.service';
+import { Familia } from '../../../familia.model';
 
 @Component({
   selector: 'app-familias-detalle',

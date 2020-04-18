@@ -1,4 +1,4 @@
-import {     Component,
+import { Component,
     Input,
     Output,
     EventEmitter,
@@ -8,7 +8,7 @@ import {     Component,
     DoCheck,
     OnDestroy
 } from '@angular/core';
-import { Familia } from '../familia.model';
+import { Familia } from '../../../familia.model';
 
 @Component({
     selector: 'app-familia',

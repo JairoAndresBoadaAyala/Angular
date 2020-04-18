@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { FamiliasComponent } from './familias/familias.component';
-import { ContactoComponent } from './contacto/contacto.component';
+import { ContactoComponent } from './contacto/componentes/contacto.component';
 import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FamiliasDetalleComponent } from './familias-detalle/familias-detalle.component';
 import { LayoutComponent } from './layout/layout.component';
 
 
@@ -25,11 +23,11 @@ const routes: Routes = [
       },
       {
         path: 'familias',
-        component: FamiliasComponent
+        loadChildren: () => import('./familias/familias.module').then(m => m.FamiliasModule)
       },
       {
         path: 'familias/:id',
-        component: FamiliasDetalleComponent
+        loadChildren: () => import('./familias/familias.module').then(m => m.FamiliasModule)
       },
       {
         path: 'contacto',
