@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FamiliaComponent } from '../familias/componentes/familia/familia.componente';
 import { FamiliasModule } from '../familias/familias.module';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FamiliasModule } from '../familias/familias.module';
   ],
   imports: [
     CommonModule,
-    RouterModule
-    ]
+    RouterModule,
+    MaterialModule
+  ]
 })
 export class SharedModule { }

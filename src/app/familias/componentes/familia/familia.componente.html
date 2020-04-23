@@ -1,9 +1,19 @@
-<h3 appHighligth> {{familiaCompleta.title | uppercase}}</h3>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{familiaCompleta.title | uppercase}}</mat-card-title>
+        <mat-card-subtitle>{{familiaCompleta.fechaNacimiento | edades }} años</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+        <img [src]="familiaCompleta.image" alt="">
+    </div>
+    <mat-card-content>
+        <p>Descripcion : {{ familiaCompleta.description | slice:0:10 }} ...</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button [routerLink]="['/familias', familiaCompleta.id]">Ver detalle</a>
+        <button (click)="agregarFamiliar()" mat-raised-button color="primary">Agregar familiar</button>
+    </mat-card-actions>
+</mat-card>
+<!-- <h3 appHighligth> {{familiaCompleta.title | uppercase}}</h3>
 <img [src]="familiaCompleta.image" alt="">
-<p>{{familiaCompleta.fechaNacimiento | edades }} años</p>
-<button (click) = "agregarFamiliar()" mat-raised-button color="primary">Agregar familiar</button>
-<a [routerLink]="['/familias', familiaCompleta.id]">Ver detalle</a>
-
-    
-  
-    
+<p>{{familiaCompleta.fechaNacimiento | edades }} años</p> -->

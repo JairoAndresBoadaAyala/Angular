@@ -1,6 +1,16 @@
-<nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/familias" routerLinkActive="active">Familias</a>
-    <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+                <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-button routerLink="/familias" routerLinkActive="active">Familias</a>
+                <a mat-button routerLink="/contacto" routerLinkActive="active">Contacto</a>
+            </nav>
+            <a mat-raised-button matBadge="4" matBadgeColor="warn">
+                <mat-icon>group</mat-icon>
+                Familiares
+            </a>
+        </div>
 
-</nav>
+    </mat-toolbar-row>
+</mat-toolbar>
